@@ -1,0 +1,12 @@
+Manual to run the application:
+Inside the directory run following:
+
+Windows:
+javac src/Main.java 
+java src/Main
+
+Ubuntu/Linux:
+javac ./src -cp src/Main.java && java src/Main
+
+If you decide to input data manually, read the sampleinput.txt
+file for proper formatting.

@@ -1,0 +1,32 @@
+Data: Textbook data from Page 250
+Minimum Support = 0.5
+
+Input database
+--------------------------------------------
+T4 = [Milk, Unicorn, Corn, Yogurt]
+T5 = [Corn, Onion, Kidney Beans, Ice cream, Eggs]
+T1 = [Milk, Onion, Nutmeg, Kidney Beans, Eggs, Yogurt]
+T2 = [Dill, Onion, Nutmeg, Kidney Beans, Eggs, Yogurt]
+T3 = [Milk, Apple, Kidney Beans, Eggs]
+
+Apriori Iterations
+--------------------------------------------
+L(1)			[[Eggs], [Kidney Beans], [Milk], [Onion], [Yogurt]]
+C(2)[Join]		[[Eggs, Kidney Beans], [Eggs, Milk], [Eggs, Onion], [Eggs, Yogurt], [Kidney Beans, Milk], [Kidney Beans, Onion], [Kidney Beans, Yogurt], [Milk, Onion], [Milk, Yogurt], [Onion, Yogurt]]
+C(2)[Prune]		[[Eggs, Kidney Beans], [Eggs, Milk], [Eggs, Onion], [Eggs, Yogurt], [Kidney Beans, Milk], [Kidney Beans, Onion], [Kidney Beans, Yogurt], [Milk, Onion], [Milk, Yogurt], [Onion, Yogurt]]
+
+L(2)			[[Eggs, Kidney Beans], [Eggs, Onion], [Kidney Beans, Onion]]
+C(3)[Join]		[[Eggs, Kidney Beans, Onion]]
+C(3)[Prune]		[[Eggs, Kidney Beans, Onion]]
+
+L(3)			[[Eggs, Kidney Beans, Onion]]
+C(4)[Join]		[]
+C(4)[Prune]		[]
+
+Most Frequent Item sets
+--------------------------------------------
+[[Eggs], [Kidney Beans], [Milk], [Onion], [Yogurt], [Eggs, Kidney Beans], [Eggs, Onion], [Kidney Beans, Onion], [Eggs, Kidney Beans, Onion]]
+Total Itemsets in Frequent Itemset = 9
+Support of [Kidney Beans, Eggs] = 0.8
+Support of [Eggs, Onions] = 0.6
+Support of [Kidney Beans, Onions] = 0.6
